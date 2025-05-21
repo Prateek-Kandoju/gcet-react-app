@@ -3,29 +3,32 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
+    <div>
+      <BrowserRouter>
         <header>
-          <h1>My React Store By Prateek</h1>
-          <hr/>
+          <h1>My Online Shop</h1>
+          <Link to="/">Home</Link>-
+          <Link to="/cart">Cart</Link>
+          <hr />
         </header>
 
         <main>
-             <h2>Products List</h2>
-             <hr/>
+          <Routes>
+            <Route index element={<Product />} />
+            <Route path="/" element={<Product/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
+          </Routes>
         </main>
 
         <footer>
-          <p>&copy;2025, All Rights Reserved</p>
-
+          <hr />
+          &copy; 2005. All rights Reserved.
         </footer>
-      </div>
-    </>
+      </BrowserRouter>
+    </div>
   );
 }
-
 export default App;
