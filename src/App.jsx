@@ -10,11 +10,11 @@ function App() {
     <>
       <div>
         <header>
-          <h1>My React Store By Prateek</h1>
+          <h1>My React Store By Prateek</h1><hr></hr>
         </header>
 
         <main>
-             <h2>Products List</h2>
+             <h2>Products List</h2><hr></hr>
         </main>
 
         <footer>
