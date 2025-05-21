@@ -15,7 +15,7 @@ function App() {
         </header>
 
         <main>
-             <h2>Products List</h2><hr></hr>
+             <h2>Products List</h2>
              <hr/>
         </main>
 
