@@ -34,10 +34,10 @@ export default function Cart() {
   };
 
   const placeOrder = async () => {
-  const url = `${API}/api/orders/new`; // ✅ add `/api/`
+  const url = `${API}/orders/new`; // ✅ add `/api/`
   const payload = {
     email: user.email,
-    orderValue
+    orderValue: orderValue
   };
 
   console.log("🔄 Trying to place order to:", url);
