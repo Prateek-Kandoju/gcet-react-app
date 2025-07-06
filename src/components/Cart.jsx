@@ -35,25 +35,26 @@ export default function Cart() {
 
   const placeOrder = async () => {
   const url = `${API}/orders/new`;
+  const payload = {
+    email: user.email,
+    orderValue
+  };
+
+  console.log("🔄 Trying to place order to:", url);
+  console.log("📦 Payload:", payload);
+
   try {
-    console.log("Placing order with:", {
-      email: user.email,
-      orderValue
-    });
+    const res = await axios.post(url, payload);
+    console.log("✅ Order success:", res.data);
 
-    const res = await axios.post(url, {
-      email: user.email,
-      orderValue
-    });
-
-    console.log("Order placed successfully:", res.data);
     setCart({});
     Navigate("/order");
   } catch (err) {
-    console.error("Order failed:", err.response?.data || err.message);
+    console.error("❌ Order failed:", err.response?.data || err.message);
     alert("Failed to place order. Please try again.");
   }
 };
+
 
   const loginToOrder = () => {
     Navigate("/login");
