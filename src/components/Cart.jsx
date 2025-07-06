@@ -34,7 +34,7 @@ export default function Cart() {
   };
 
   const placeOrder = async () => {
-  const url = `${API}/orders/new`;
+  const url = `${API}/api/orders/new`; // ✅ add `/api/`
   const payload = {
     email: user.email,
     orderValue
