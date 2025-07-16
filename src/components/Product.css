@@ -1,18 +1,22 @@
 .App-Product-Row {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px; /* Reduced gap to match smaller cards */
+  gap: 24px;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
+  max-height: 90vh; /* Fit within screen */
+  overflow-y: auto;
+  align-content: flex-start;
 }
 
 .product-card {
-  width: 150px; /* Smaller width */
+  width: 150px;
+  height: 250px; /* Fixed height for consistent layout */
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 12px; /* Less padding */
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,28 +30,28 @@
 
 .product-image {
   width: 100%;
-  height: 120px; /* Reduced image height */
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
   margin: 10px 0;
 }
 
 .product-card h3 {
-  font-size: 0.95rem; /* Smaller font */
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
   color: #333;
 }
 
 .product-card h4 {
-  font-size: 0.85rem; /* Smaller font */
+  font-size: 0.8rem;
   margin: 0;
   color: #666;
 }
 
 .product-card button {
-  margin-top: 8px;
+  margin-top: auto;
   padding: 6px 10px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   background-color: rgb(110, 165, 165);
   color: white;
   border: none;
